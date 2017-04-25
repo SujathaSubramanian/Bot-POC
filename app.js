@@ -13,13 +13,20 @@ console.log('%s listening to %s', server.name, server.url);
 
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId: '7ebbded0-6bc7-4904 - 85a9-9d9241b88543',
+    appId: '7ebbded0-6bc7-4904-85a9-9d9241b88543',
     appPassword: 'GRKwbUc3PWNrRRsttbqL0HF'
+    
 });
+
+/*var connector = new builder.ChatConnector({
+    appId: null,
+    appPassword: null
+});*/
 
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen())
 
+//var username = 'Sujatha_Subramanian';
 var username;
 var quiz = require('./api.js');
 var index = 0;

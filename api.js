@@ -1,9 +1,10 @@
 ﻿exports.GetSets = function (user, callback) {
     request.get({
-        uri: 'https://api.quizlet.com/2.0/users/' + user + '/sets?client_id=B5QCeV3mda',
-
+        //uri: 'https://api.quizlet.com/2.0/users/' + user + '/sets?client_id=B5QCeV3mda',
+        uri: 'https://api.quizlet.com/2.0/users/Sujatha_Subramanian/sets?client_id=B5QCeV3mda',
     },
         function (error, response, body) {
+            console.log(body);
             if (error)
                 callback(error);
             else {
